@@ -15,28 +15,6 @@ Route::get('/test', function (\App\Services\CalculateService $calculate) {
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Route::get('/instagram/profile/{username}', function (string $username, ApiInstagramInterface $apiInstagram, \Psr\SimpleCache\CacheInterface $cache) {
     $user = $apiInstagram->getProfile($username);
 
