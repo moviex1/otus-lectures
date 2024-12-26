@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Facade;
  */
 final class Calc extends Facade
 {
+    public const Accessor = 'calc';
     protected static function getFacadeAccessor(): string
     {
-        return 'calc';
+        return self::Accessor;
     }
 }

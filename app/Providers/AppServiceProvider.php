@@ -4,9 +4,11 @@ namespace App\Providers;
 
 use App\Contracts\ApiInstagramInterface;
 use App\Contracts\CalculateInterface;
+use App\Facades\Calc;
 use App\Services\CalculateService;
 use App\Services\Instagram\FirstInstagramApi;
 use App\Services\Instagram\SecondInstagramApi;
+use App\Services\TestService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,11 +18,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind('calc', CalculateService::class);
-        $this->app->bind(CalculateInterface::class, CalculateService::class);
+
+
+
+
+
 
 //        $this->app->bind(ApiInstagramInterface::class, FirstInstagramApi::class);
-//        $this->app->bind(ApiInstagramInterface::class, SecondInstagramApi::class);
+        $this->app->bind(ApiInstagramInterface::class, SecondInstagramApi::class);
     }
 
     /**

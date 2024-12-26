@@ -9,7 +9,6 @@ use App\DTO\InstagramResponseDTO;
 
 final readonly class FirstInstagramApi implements ApiInstagramInterface
 {
-
     public function getProfile(string $name): InstagramResponseDTO
     {
         //Делаем запрос в сторонний сервис и получаем ответ
