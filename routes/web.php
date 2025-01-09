@@ -13,3 +13,7 @@ Route::get('/hello', function () {
 Route::get('/bye', function () {
     return 'bye';
 });
+
+Route::get('/bye2', function () {
+    return 'asdf';
+});
