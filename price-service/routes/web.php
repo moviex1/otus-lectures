@@ -9,8 +9,16 @@ Route::get('/', function () {
 });
 
 Route::get('/api/prices/{productId}', function (int $productId) {
-    return Price::query()
-        ->findOrFail($productId);
+    $price = Price::query()
+        ->where('product_id', $productId)
+        ->get()
+        ->first();
+
+    if ($price === null ) {
+        return response(status: 404);
+    }
+
+    return $price;
 });
 
 Route::post('/api/prices', function (Request $request) {
