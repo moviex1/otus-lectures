@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Clients;
+namespace App\Clients\PriceService;
 
 
 use Illuminate\Http\Client\PendingRequest;
