@@ -1,0 +1,1 @@
+echo "value" > result.txt
